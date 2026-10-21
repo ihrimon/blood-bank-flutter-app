@@ -1,8 +1,8 @@
 # STATUS
 
 **Current:** Sprint 0 — Setup (`docs/sprints/sprint-0.md`)
-**Last done:** Planning docs, workflow files, ADR 0008 (cloud staging, no local Supabase). Dev machine ready: Git, VS Code + Flutter ext, JDK 17, Android SDK (C:\Android, no Android Studio), Flutter 3.47.7 (C:\src\flutter), Supabase CLI 2.121.0
-**Next:** S0-T1 — git init + repo hygiene
+**Last done:** S0-T1 — git repo on `main`, .gitignore/.gitattributes/README, first commit (0bcf8be)
+**Next:** S0-T2 — Flutter project
 **Blockers / waiting on user:**
 - Gateway phone + separate SIM (needed for S0-T7)
 - Google account for Google Cloud OAuth (S0-T5)

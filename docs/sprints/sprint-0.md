@@ -8,6 +8,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · **(U)** = needs the use
 - [x] `.gitattributes` (LF for `*.sql`, `*.dart`, `*.ts`, `*.md`)
 - [x] `README.md` (short, Bangla, points to docs/)
 - Done when: first commit contains docs + `.claude/` + CLAUDE.md files.
+- Note: `docs/learning/` and `blood-bank-plan.md` are gitignored (personal, local only). `/verify` skipped: no code yet.
 
 ### S0-T2 — Flutter project
 - [ ] `flutter create --org <org> --project-name <name> --platforms android app` (keep existing `app/CLAUDE.md`)
