@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(flutter analyze:*)",
+      "Bash(flutter test:*)",
+      "Bash(flutter pub get:*)",
+      "Bash(flutter gen-l10n:*)",
+      "Bash(dart format:*)",
+      "Bash(dart run build_runner:*)",
+      "Bash(supabase --version)",
+      "Bash(supabase test db --linked:*)",
+      "Bash(supabase db lint --linked:*)",
+      "Bash(supabase migration new:*)",
+      "Bash(supabase migration list:*)",
+      "Bash(deno check:*)",
+      "Bash(deno test:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [
+      "Bash(supabase start:*)",
+      "Bash(supabase db reset:*)",
+      "Bash(supabase functions serve:*)",
+      "Bash(supabase db push --db-url:*)",
+      "Bash(supabase link:*)",
+      "Bash(supabase unlink:*)",
+      "Bash(supabase projects:*)",
+      "Bash(supabase secrets set:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*.key)",
+      "Read(**/*.jks)",
+      "Read(**/*.keystore)",
+      "Read(**/age-private*)",
+      "Read(./app/build/**)",
+      "Read(./app/.dart_tool/**)",
+      "Read(**/*.g.dart)",
+      "Read(**/*.freezed.dart)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/protect-migrations.ps1\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/format-dart.ps1\""
+          }
+        ]
+      }
+    ]
+  }
+}

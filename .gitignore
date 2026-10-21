@@ -1,0 +1,69 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.iml
+*.swp
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.jks
+*.keystore
+key.properties
+google-services.json
+GoogleService-Info.plist
+
+# Personal notes — local only
+docs/learning/
+blood-bank-plan.md
+
+# Claude Code local overrides
+.claude/settings.local.json
+
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+coverage/
+*.g.dart.tmp
+app/android/.gradle/
+app/android/captures/
+app/android/local.properties
+app/android/app/debug/
+app/android/app/profile/
+app/android/app/release/
+**/android/**/GeneratedPluginRegistrant.java
+**/android/gradlew
+**/android/gradlew.bat
+**/android/gradle/wrapper/gradle-wrapper.jar
+
+# Supabase CLI
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+supabase/functions/.env
+
+# Deno
+.deno/
+
+# Backups / dumps
+*.bak
+*.backup
+*.dump
+*.sql.gz
+backups/
+
+# Logs
+*.log
