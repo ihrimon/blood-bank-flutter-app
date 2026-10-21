@@ -11,10 +11,11 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · **(U)** = needs the use
 - Note: `docs/learning/` and `blood-bank-plan.md` are gitignored (personal, local only). `/verify` skipped: no code yet.
 
 ### S0-T2 — Flutter project
-- [ ] `flutter create --org <org> --project-name <name> --platforms android app` (keep existing `app/CLAUDE.md`)
-- [ ] minSdk 24; flavors `staging`/`prod` (Gradle productFlavors + `main_staging.dart`/`main_prod.dart`)
-- [ ] Packages from MVP §৩; lint `very_good_analysis`; folder skeleton `lib/{app,core,l10n,features}`
+- [x] `flutter create --org <org> --project-name <name> --platforms android app` (keep existing `app/CLAUDE.md`)
+- [x] minSdk 24; flavors `staging`/`prod` (Gradle productFlavors + `main_staging.dart`/`main_prod.dart`)
+- [x] Packages from MVP §৩; lint `very_good_analysis`; folder skeleton `lib/{app,core,l10n,features}`
 - Done when: `flutter analyze` clean, `flutter build apk --flavor staging -t lib/main_staging.dart` succeeds.
+- Note: Firebase packages deferred to S0-T6 (need `google-services.json`). Avast Web Shield intercepts TLS on the dev machine; Gradle needs a truststore with the Avast root (`JAVA_TOOL_OPTIONS=-Djavax.net.ssl.trustStore=...`). Fat APK is 42 MB (3 ABIs); per-ABI size check is a later task.
 
 ### S0-T3 — l10n, theme, router scaffold
 - [ ] `l10n.yaml`, `app_bn.arb` (default) + `app_en.arb`, `flutter gen-l10n`
