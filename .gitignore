@@ -67,3 +67,8 @@ backups/
 
 # Logs
 *.log
+
+# Generated Dart code (regenerate with gen-l10n / build_runner)
+*.g.dart
+*.freezed.dart
+app/lib/l10n/generated/

@@ -1,0 +1,23 @@
+{
+  "@@locale": "bn",
+  "appTitle": "রক্তদাতা",
+  "@appTitle": {
+    "description": "Placeholder app name until the final name is decided."
+  },
+  "homeTitle": "হোম",
+  "@homeTitle": {
+    "description": "Title of the placeholder home screen."
+  },
+  "loading": "লোড হচ্ছে…",
+  "@loading": {
+    "description": "Shown on the splash screen while the app starts."
+  },
+  "language": "ভাষা",
+  "@language": {
+    "description": "Label for the language switch."
+  },
+  "switchToOtherLanguage": "English",
+  "@switchToOtherLanguage": {
+    "description": "Button label that switches to the other language, written in that language."
+  }
+}
