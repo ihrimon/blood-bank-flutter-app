@@ -18,9 +18,11 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · **(U)** = needs the use
 - Note: Firebase packages deferred to S0-T6 (need `google-services.json`). Avast Web Shield intercepts TLS on the dev machine; Gradle needs a truststore with the Avast root (`JAVA_TOOL_OPTIONS=-Djavax.net.ssl.trustStore=...`). Fat APK is 42 MB (3 ABIs); per-ABI size check is a later task.
 
 ### S0-T3 — l10n, theme, router scaffold
-- [ ] `l10n.yaml`, `app_bn.arb` (default) + `app_en.arb`, `flutter gen-l10n`
-- [ ] Theme (large touch targets, Bangla-capable font), go_router with placeholder Splash/Home
+- [x] `l10n.yaml`, `app_bn.arb` (default) + `app_en.arb`, `flutter gen-l10n`
+- [x] Theme (large touch targets, Bangla-capable font), go_router with placeholder Splash/Home
 - Done when: app launches on emulator in Bangla, language toggle works.
+- Note: Noto Sans Bengali bundled (no runtime fetch); generated Dart code is gitignored, regenerate via gen-l10n/build_runner. Locale toggle is in-memory only — persist it in a later settings task.
+- Note: Emulator AVD `Pixel_4a` (API 34) uses 2 GB internal storage (C: is nearly full). Debug builds hang after `--no-resident`; test with `--release` or keep `flutter run` attached.
 
 ### S0-T4 — Supabase CLI + cloud projects **(U)** — no local stack (ADR 0008)
 - [x] (U) Supabase CLI installed via Scoop (`supabase --version` → 2.121.0)
