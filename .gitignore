@@ -24,6 +24,7 @@ GoogleService-Info.plist
 # Personal notes — local only
 docs/learning/
 blood-bank-plan.md
+/ai-workflow.md
 
 # Claude Code local overrides
 .claude/settings.local.json

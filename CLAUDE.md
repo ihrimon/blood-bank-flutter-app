@@ -3,10 +3,10 @@
 Android app (Flutter) + Supabase backend that pushes emergency blood requests to nearby, eligible, verified donors, in waves. Launch district: Rangamati. **Budget is zero**: everything must run on free tiers.
 
 ## Start of every session
-1. Read `docs/STATUS.md` (current sprint, last done, next task). Nothing else by default.
+1. `docs/STATUS.md` is injected by a SessionStart hook (current sprint, last done, next task). Don't Read it again; nothing else by default.
 2. Read only the current task in `docs/sprints/sprint-N.md`, then only the doc sections that task references (see Doc map).
-3. Never read `docs/learning/` (the user's personal study guide) unless the user asks to create or update a card there.
-4. Never read `docs/PRD.md` or `docs/MVP.md` in full. Locate sections with Grep on the heading (e.g. `^### ৫.৬`) and read that range.
+3. Never read `docs/learning/` or `docs/ai-workflow.md` (the user's own notes) unless the user asks to work on them. A hook asks the user first.
+4. Never read `docs/PRD.md` or `docs/MVP.md` in full (a hook blocks Read without `limit`). Grep the heading with `-n` (e.g. `^### ৫.৬`), then Read that range.
 
 ## Doc map (docs are in Bangla; headings use Bangla numerals)
 | Topic | Where |
