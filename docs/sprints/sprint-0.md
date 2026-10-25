@@ -26,12 +26,13 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · **(U)** = needs the use
 
 ### S0-T4 — Supabase CLI + cloud projects **(U)** — no local stack (ADR 0008)
 - [x] (U) Supabase CLI installed via Scoop (`supabase --version` → 2.121.0)
-- [ ] (U) Create free projects `staging` and `prod`; store refs/keys in local `.env` files (never committed)
-- [ ] `supabase init` (creates `supabase/config.toml`; keep existing `supabase/CLAUDE.md`)
-- [ ] (U) `supabase login` then `supabase link --project-ref <staging-ref>` — staging only, never prod
-- [ ] Extensions migration: `postgis`, `pg_cron`, `pg_net`, `pgtap`; push to staging
-- [ ] Re-check free tier limits on the official pricing page; note any change in MVP §১১
+- [x] (U) Create ONE free project `RoktoSetu` (ADR 0009, acts as staging until launch); store ref/keys in local `.env.staging` (never committed)
+- [x] `supabase init` (creates `supabase/config.toml`; keep existing `supabase/CLAUDE.md`)
+- [x] (U) `supabase login` then `supabase link --project-ref <staging-ref>` — staging only, never prod
+- [x] Extensions migration: `postgis`, `pg_cron`, `pg_net`, `pgtap`; push to staging
+- [x] Re-check free tier limits on the official pricing page; note any change in MVP §১১
 - Done when: `supabase migration list` shows the migration applied on staging and `supabase test db --linked` passes one smoke test.
+- Note: Project `RoktoSetu` in Mumbai (ap-south-1), linked. `supabase test db --linked` needs Docker, which is not run on this machine; the smoke test was run via `supabase db query --linked -f` (shows last statement only) and the extensions verified from `pg_extension`. Full pgTAP run happens in CI (S0-T8). Free tier re-checked 2026-10-25: matches MVP §১১ (2 projects, 500 MB, 50k MAU, 500k invocations, 7-day pause, no automatic backups; also 1 GB storage, 5 GB egress, 1-day log retention).
 
 ### S0-T5 — Google Sign-In setup **(U)**
 - [ ] (U) Google Cloud project, OAuth consent screen, Android client (SHA-1 of debug + release keys) and Web client ID

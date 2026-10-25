@@ -39,7 +39,7 @@ Android app (Flutter) + Supabase backend that pushes emergency blood requests to
 - **Never edit a committed or already-pushed migration.** Create a new one (`/new-migration`). A hook enforces the committed case; check `supabase migration list` for the pushed case.
 - **All UI strings via l10n** (`app_bn.arb` primary, `app_en.arb`). No hardcoded user-facing text.
 - **Tunable numbers live in `app_config`**, not in code (intervals, radii, caps, limits).
-- Prod is touched only by the user. Claude may push only to the linked **staging** project, after asking. Never use `--db-url`, never relink.
+- Prod is touched only by the user. Claude may push only to the linked project (staging role; one shared project until launch, ADR 0009), after asking. Never use `--db-url`, never relink. After launch the old project is prod and off limits.
 
 ## Conventions
 - Code, comments, identifiers, commit messages: English. Docs and chat with the user: Bangla.

@@ -13,3 +13,4 @@ Read only the ADR relevant to your task. Do not reverse an Accepted ADR without 
 | [0006](0006-rangamati-launch-neighbor-wave.md) | Launch in Rangamati; Wave 4 to neighbor districts for rare groups | D9, §৫.১ |
 | [0007](0007-config-driven-rules.md) | Tunable rules in `app_config` | D4 |
 | [0008](0008-cloud-staging-no-local-supabase.md) | Cloud staging is the dev DB; no local Supabase; pgTAP in CI + `--linked` | — |
+| [0009](0009-single-project-until-launch.md) | One Supabase project until launch (acts as staging), then becomes prod; wipe checklist | D10 |
