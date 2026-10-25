@@ -73,3 +73,7 @@ backups/
 *.g.dart
 *.freezed.dart
 app/lib/l10n/generated/
+
+# Markdown docs stay local; only the root README is published
+*.md
+!/README.md
