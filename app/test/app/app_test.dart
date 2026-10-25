@@ -1,12 +1,24 @@
 import 'package:blooddonor/app/app.dart';
 import 'package:blooddonor/core/env.dart';
+import 'package:blooddonor/core/supabase/supabase_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() {
   testWidgets('starts in Bangla on Home and toggles language', (tester) async {
+    final client = SupabaseClient(
+      'http://localhost',
+      'test-key',
+      authOptions: const AuthClientOptions(autoRefreshToken: false),
+    );
     await tester.pumpWidget(
-      const ProviderScope(child: App(flavor: Flavor.prod)),
+      ProviderScope(
+        overrides: [
+          supabaseClientProvider.overrideWithValue(client),
+        ],
+        child: const App(flavor: Flavor.prod),
+      ),
     );
     await tester.pumpAndSettle();
 

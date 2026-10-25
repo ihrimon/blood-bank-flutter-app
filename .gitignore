@@ -5,13 +5,10 @@ desktop.ini
 .idea/
 *.iml
 *.swp
-.vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
 
 # Secrets — never commit
-.env
-.env.*
 !.env.example
 *.key
 *.pem
@@ -77,3 +74,5 @@ app/lib/l10n/generated/
 # Markdown docs stay local; only the root README is published
 *.md
 !/README.md
+config.bat
+node_modules
