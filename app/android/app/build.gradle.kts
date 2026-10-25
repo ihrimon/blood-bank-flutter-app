@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "bd.placeholder.blooddonor"
+    namespace = "bd.placeholder.roktosetu"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         // Placeholder until the app name is decided (see docs/STATUS.md).
-        applicationId = "bd.placeholder.blooddonor"
+        applicationId = "bd.placeholder.roktosetu"
         minSdk = 24
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
